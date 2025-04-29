@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import ProductCard from "@/components/ProductCard";
-import TestimonialCard from "@/components/TestimonialCard";
 import { Diamond, ShoppingBag, Badge, Heart, Star } from "lucide-react";
 
 const Index = () => {
@@ -34,34 +33,6 @@ const Index = () => {
       name: "Silver Statement Ring with Gold Plating",
       price: "$149.99",
       image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-    }
-  ];
-
-  // Testimonials data
-  const testimonials = [
-    {
-      id: 1,
-      name: "Sarah L.",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&h=256&q=80",
-      rating: 5,
-      content: "I've received so many compliments on my bracelet. The gold plating is still perfect after months of wear!",
-      product: "Silver Chain Bracelet with Gold Plating"
-    },
-    {
-      id: 2,
-      name: "Michael T.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&h=256&q=80",
-      rating: 4,
-      content: "Bought this as an anniversary gift for my wife. She absolutely loves the pendant and wears it daily.",
-      product: "Elegant Silver Pendant with Gold Accent"
-    },
-    {
-      id: 3,
-      name: "Jessica R.",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&h=256&q=80",
-      rating: 5,
-      content: "The quality is exceptional. These earrings are elegant enough for special occasions but also suitable for everyday wear.",
-      product: "Silver Hoop Earrings with Gold Detail"
     }
   ];
 
@@ -260,71 +231,12 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Testimonials */}
-      <section id="testimonials" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-playfair font-semibold mb-3">What Our Customers Say</h2>
-            <p className="text-gray-600 max-w-xl mx-auto">
-              Discover why our customers love their LUXESILVER jewelry pieces
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="animate-fade-in" style={{ animationDelay: `${0.1 * testimonial.id}s` }}>
-                <TestimonialCard
-                  name={testimonial.name}
-                  image={testimonial.image}
-                  rating={testimonial.rating}
-                  content={testimonial.content}
-                  product={testimonial.product}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Newsletter & Contact */}
-      <section id="contact" className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-playfair font-semibold mb-3">Stay Updated</h2>
-            <p className="text-gray-600 mb-8">
-              Subscribe to our newsletter and be the first to know about new collections, 
-              special promotions and exclusive events.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-              <input 
-                type="email" 
-                placeholder="Enter your email address" 
-                className="flex-1 px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold-light"
-              />
-              <Button className="bg-gold-dark hover:bg-gold-DEFAULT text-white transition-colors">
-                Subscribe
-              </Button>
-            </div>
-            
-            <div className="mt-12 pt-8 border-t border-gray-200">
-              <h3 className="text-xl font-playfair font-medium mb-4">Visit Our Store</h3>
-              <p className="text-gray-600 mb-2">123 Jewelry Lane, Luxury District</p>
-              <p className="text-gray-600 mb-6">New York, NY 10001</p>
-              <p className="text-gold-dark font-medium">
-                contact@luxesilver.com | (800) 555-0123
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between">
             <div className="mb-8 md:mb-0">
-              <span className="text-2xl font-playfair font-bold text-white tracking-tight">LUXE<span className="text-gold-DEFAULT">SILVER</span></span>
+              <span className="text-2xl font-playfair font-bold text-white tracking-tight">LOTUS<span className="text-gold-DEFAULT">SILVER</span></span>
               <p className="mt-2 max-w-xs">
                 Premium silver jewelry with 24K gold plating, designed for the modern individual.
               </p>
@@ -352,19 +264,19 @@ const Index = () => {
               </div>
               
               <div>
-                <h4 className="text-white font-medium mb-4">Support</h4>
+                <h4 className="text-white font-medium mb-4">Contact Us</h4>
                 <ul className="space-y-2">
-                  <li><a href="#" className="hover:text-gold-light transition-colors">FAQ</a></li>
-                  <li><a href="#" className="hover:text-gold-light transition-colors">Shipping & Returns</a></li>
-                  <li><a href="#" className="hover:text-gold-light transition-colors">Care Instructions</a></li>
-                  <li><a href="#" className="hover:text-gold-light transition-colors">Contact Us</a></li>
+                  <li className="hover:text-gold-light transition-colors">Phone: 81475539507</li>
+                  <li><a href="#" className="hover:text-gold-light transition-colors">Email: contact@lotussilver.com</a></li>
+                  <li><a href="#" className="hover:text-gold-light transition-colors">Visit Our Store</a></li>
+                  <li><a href="#" className="hover:text-gold-light transition-colors">123 Jewelry Lane, Luxury District</a></li>
                 </ul>
               </div>
             </div>
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm">© 2025 LUXESILVER. All rights reserved.</p>
+            <p className="text-sm">© 2025 Lotus Silver Jewellry. All rights reserved.</p>
             <div className="mt-4 md:mt-0">
               <ul className="flex space-x-4">
                 <li><a href="#" className="hover:text-gold-light transition-colors">Privacy Policy</a></li>
